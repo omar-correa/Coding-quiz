@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coding Questionnaire</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <div id="intro">
+            <h1>Welcome to the Coding Quiz</h1>
+        </div>
+        <div id="start">
+            <h3 id="instructions">The following 5 coding-relate questions are used to gauge your current
+            understanding of the material. All questions must be answered within the given time frame,
+                but keep in mind that incorrect answers will be penalized with a 5 second time deduction. Good luck!
+            </h3>
+            <button onclick="commence()">Begin</button>
+        </div>
+        <div id="quiz">
+            <h3>
+                <div id="question">1. Which of the following is not one of the 7 data types in JavaScript?</div>
+            </h3>
+            <div id="answerA" onclick="aChoice">A. Boolean</div>
+            <div id="answerB" onclick="bChoice">B. String</div>
+            <div id="answerC" onclick="cChoice">C. Null</div>
+            <div id="answerD" onclick="dChoice">D. Text</div>
+            <br>
+            <div><button id="buttonq1">Lock it in</button></div>
+
+        </div>
+
+
+    </main>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
