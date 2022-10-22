@@ -13,11 +13,14 @@ var answerB = document.querySelector("#answerB");
 var answerC = document.querySelector("#answerC");
 var answerD = document.querySelector("#answerD");
 var initial = document.querySelector("#initial")
-var ititialInput = document.querySelector("#initialInput")
+var initialInput = document.querySelector("#initialInput")
 var specificQuestion = 0;
 var specificAnswer = 0;
 var answerChoice = "";
 var score = 0;
+var highScore = document.querySelector("#highScore")
+var initialHide = document.querySelector("#initialHide")
+var timer = document.querySelector("#timer")
 
 var questionList = [
     "1. Which of the following is not one of the 7 data types in JavaScript?",
@@ -60,6 +63,7 @@ buttonQ2.style.display = "none"
 buttonQ3.style.display = "none"
 buttonQ4.style.display = "none"
 initial.style.display = "none"
+highScore.style.display = "none"
 
 var time = questionList.length * 15
 var clockID = ""
@@ -115,6 +119,7 @@ function dChoice() {
 function submitQuestion1() {
     if (answerChoice == "D") {
         score = score + 1;
+
     } else {
         time = time - 15
         result.style.display = "wrong"
@@ -210,7 +215,7 @@ function submitQuestion4() {
         result.style.display = "wrong"
     }
     specificQuestion = specificQuestion + 1;
-    headerText.innerHTML = "Your score is " + score + "/4";
+    headerText.innerHTML = "You answered " + score + "/4 correct";
     quiz.style.display = "none"
 
     answerA.style.color = 'black'
@@ -231,3 +236,21 @@ function submitQuestion4() {
         clearInterval(clockID)
     }
 }
+    function displayScore(){
+        initial.style.display = "none"
+        highScore.style.display = "block"
+        headerText.style.display = "none"
+        timer.style.display = "none"
+        displayFinalScore()
+        console.log(initialInput.value, time)
+    }
+
+    function displayFinalScore() {
+        var hs = document.createElement("div")
+        initials = initialInput.value
+        hs.innerTextHTML("<div>${initials}, ${time}</div>")
+        document.getElementById("final").appendChild(hs)
+    }
+
+
+    document.getElementById("btn").addEventListener("click", displayScore)
