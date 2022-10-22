@@ -12,26 +12,36 @@
 <body>
     <main>
         <div id="intro">
-            <h1>Welcome to the Coding Quiz</h1>
+            <h1 id = "headerText">Welcome to the Coding Quiz</h1>
         </div>
         <div id="start">
-            <h3 id="instructions">The following 5 coding-relate questions are used to gauge your current
+            <h3 id="instructions">The following 4 coding-relate questions are used to gauge your current
             understanding of the material. All questions must be answered within the given time frame,
-                but keep in mind that incorrect answers will be penalized with a 5 second time deduction. Good luck!
+                but keep in mind that incorrect answers will be penalized with a 15 second time deduction. Good luck!
             </h3>
             <button onclick="commence()">Begin</button>
+        </div>
+        <div id="timer">
+            Time Remaining: <span id="timeRemaining"></span>
         </div>
         <div id="quiz">
             <h3>
                 <div id="question"></div>
             </h3>
-            <div id="answerA" onclick="aChoice()">A. Boolean</div>
-            <div id="answerB" onclick="bChoice()">B. String</div>
-            <div id="answerC" onclick="cChoice()">C. Null</div>
-            <div id="answerD" onclick="dChoice()">D. Text</div>
+            <div id="answerA" onclick="aChoice()"></div>
+            <div id="answerB" onclick="bChoice()"></div>
+            <div id="answerC" onclick="cChoice()"></div>
+            <div id="answerD" onclick="dChoice()"></div>
             <br>
-            <div><button id="buttonq1" onclick="submitQuestion1()">Lock it in</button></div>
-
+            <div id="buttonQ1" onclick="submitQuestion1()"><button>Lock in Question 1</button></div>
+            <div id="buttonQ2" onclick="submitQuestion2()"><button>Lock in Question 2</button></div>
+            <div id="buttonQ3" onclick="submitQuestion3()"><button>Lock in Question 3</button></div>
+            <div id="buttonQ4" onclick="submitQuestion4()"><button>Lock in Question 4</button></div>
+            <div id="result"></div>
+        </div>
+        <div id = "initial">
+            <input id="initialInput">
+            <button>Enter Initials</button>
         </div>
 
 
