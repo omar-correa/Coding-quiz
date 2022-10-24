@@ -57,6 +57,8 @@ var dAnswerList = [
     "d. if else loop"
 ]
 
+var pastScores = JSON.parse(localStorage.getItem("pastScores") || "[]")
+
 quiz.style.display = "none"
 buttonQ1.style.display = "none"
 buttonQ2.style.display = "none"
@@ -69,9 +71,9 @@ var time = questionList.length * 15
 var clockID = ""
 
 function countDown() {
-    if(time >=0){
-    timeRemaining.textContent = time
-    time--
+    if (time >= 0) {
+        timeRemaining.textContent = time
+        time--
     }
 }
 
@@ -236,21 +238,40 @@ function submitQuestion4() {
         clearInterval(clockID)
     }
 }
-    function displayScore(){
-        initial.style.display = "none"
-        highScore.style.display = "block"
-        headerText.style.display = "none"
-        timer.style.display = "none"
-        displayFinalScore()
-        console.log(initialInput.value, time)
-    }
+function displayScore() {
+    initial.style.display = "none"
+    highScore.style.display = "block"
+    headerText.style.display = "none"
+    timer.style.display = "none"
 
-    function displayFinalScore() {
+    console.log("before", pastScores)
+    pastScores.push({ initials: initialInput.value, score: time })
+
+    localStorage.setItem("pastScores", JSON.stringify(pastScores));
+
+    console.log("after", pastScores)
+
+    displayFinalScore()
+    console.log(initialInput.value, time)
+}
+
+function displayFinalScore() {
+
+    console.log("pastScores", pastScores)
+
+    pastScores.forEach(score => {
+        console.log("score", score)
+
         var hs = document.createElement("div")
-        initials = initialInput.value
-        hs.innerTextHTML("<div>${initials}, ${time}</div>")
+        initials = score.initials
+        hs.innerHTML = `${score.initials}: ${score.score + time}`
+
+        console.log("hs", hs, hs.innerHTML)
+
         document.getElementById("final").appendChild(hs)
-    }
+    })
+}
 
 
-    document.getElementById("btn").addEventListener("click", displayScore)
+
+document.getElementById("btn").addEventListener("click", displayScore)
