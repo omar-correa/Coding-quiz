@@ -25,8 +25,7 @@ THEN I can save my initials and my score
 ```
 
 ## Mock-Up
-
-
+![codingquiz](https://user-images.githubusercontent.com/113458061/197822116-57a97fe0-9d3e-4150-a60e-440618394d30.jpg)
 
 
 ## Omar Correa
