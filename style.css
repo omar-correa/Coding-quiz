@@ -1,3 +1,74 @@
 body {
-    background-color:khaki;
+    background-color:blanchedalmond;
 }
+
+#intro {
+    text-align: center;
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: maroon;
+}
+
+#start {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:maroon;
+    width: 40%;
+    margin-left: 30%;
+}
+
+#timer {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}
+
+#quiz {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#answerA {
+    border-style: double;
+    width: fit-content;
+    margin-left: 43.5%;
+    
+}
+#answerB {
+    border-style: double;
+    width: fit-content;
+    margin-left: 43.5%;
+    
+}
+#answerC {
+    border-style: double;
+    width: fit-content;
+    margin-left: 43.5%;
+    
+}
+#answerD {
+    border-style: double;
+    width: fit-content;
+    margin-left: 43.5%;
+    
+}
+
+#initial {
+    text-align: center;
+}
+
+#highScore {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: maroon;
+    font-size: 25px;
+}
+
+#final {
+    text-align: center;
+    border-style: double;
+    width: fit-content;
+    margin-left: 49%;
+}
+
